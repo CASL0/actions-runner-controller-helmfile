@@ -1,0 +1,4 @@
+---
+environments:
+  default:
+    kubeContext: kubernetes-admin-cluster.local@cluster.local

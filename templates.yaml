@@ -1,0 +1,7 @@
+---
+templates:
+  default:
+    atomic: true
+    missingFileHandler: Debug
+    values:
+      - config/{{ .Environment.Name }}.values.yaml
