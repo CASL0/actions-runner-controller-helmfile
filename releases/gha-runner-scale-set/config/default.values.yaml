@@ -1,0 +1,17 @@
+---
+githubConfigUrl: https://github.com/CASL0/actions-runner-controller-helmfile
+maxRunners: 5
+minRunners: 0
+template:
+  spec:
+    securityContext:
+      capabilities:
+        drop:
+          - ALL
+      readOnlyRootFilesystem: true
+      runAsNonRoot: true
+      runAsUser: 1001
+githubConfigSecret: arc-runners-secret
+controllerServiceAccount:
+  namespace: arc-system
+  name: arc-gha-rs-controller

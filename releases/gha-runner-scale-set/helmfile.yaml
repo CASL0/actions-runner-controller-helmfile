@@ -1,0 +1,10 @@
+---
+{{readFile "../../bases.yaml"}}
+---
+releases:
+  - name: my-arc-runners
+    namespace: arc-runners
+    chart: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set
+    version: 0.10.1
+    inherit:
+      - template: default
