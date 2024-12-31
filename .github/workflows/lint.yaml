@@ -1,0 +1,20 @@
+---
+name: Lint
+on:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Helmfile Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run helmfile lint
+        uses: helmfile/helmfile-action@v2.0.2
+        with:
+          helmfile-args: lint
