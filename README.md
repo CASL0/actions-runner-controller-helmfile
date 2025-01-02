@@ -4,7 +4,7 @@
 
 # actions-runner-controller-helmfile
 
-Deploy ondemand GitHub Actions self-hosted runners using [actions-runner-controller](https://github.com/actions/actions-runner-controller).
+Deploy ondemand GitHub Actions auto-scaling runners with [actions-runner-controller](https://github.com/actions/actions-runner-controller).
 
 ## Prerequisites
 
@@ -12,14 +12,34 @@ Deploy ondemand GitHub Actions self-hosted runners using [actions-runner-control
 - Create a pre-define Kubernetes secret `arc-runners-secret` in the namespace `arc-runners` the gha-runner-scale-set is going to deploy with the command below
 
   ```sh
-  kubectl create secret generic arc-runners-secret --namespace=arc-runners --from-literal=github_token='ghp_your_pat'
+  kubectl create secret generic arc-runners-secret \
+    --namespace=arc-runners \
+    --from-literal=github_token='ghp_your_pat'
   ```
 
 ## Getting started
 
-```sh
-helmfile apply
-```
+1. Set the `githubConfigUrl` value in the file [default.values.yaml](./releases/gha-runner-scale-set/config/default.values.yaml) to the GitHub url for where you want to configure runners.
+
+   ```yaml
+   githubConfigUrl: https://github.com/CASL0/actions-runner-controller-helmfile
+   ```
+
+1. Use the following commands to deploy self-hosted runners.
+
+   ```sh
+   helmfile apply
+   ```
+
+1. Set the `runs-on` value to `my-arc-runners` in your workflows similar to the following.
+
+   ```yaml
+   jobs:
+     build:
+       runs-on: my-arc-runners
+       steps:
+         - run: echo "Hello world!"
+   ```
 
 ## Contributing
 
