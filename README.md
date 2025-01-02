@@ -2,9 +2,11 @@
 [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://opensource.org/license/mit)
 
-# actions-runner-controller-helmfile
+# Deploy ondemand GitHub Actions auto-scaling runners with actions-runner-controller
 
-Deploy ondemand GitHub Actions auto-scaling runners with [actions-runner-controller](https://github.com/actions/actions-runner-controller).
+[Actions-runner-controller](https://github.com/actions/actions-runner-controller) can controll GitHub Actions auto-scaling runners.
+
+This helmfile provides quick instructions on Kubernetes environments.
 
 ## Prerequisites
 
