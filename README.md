@@ -10,14 +10,8 @@ This helmfile provides quick instructions on Kubernetes environments.
 
 ## Prerequisites
 
-- Install [helmfile](https://github.com/helmfile/helmfile)
-- Create a pre-define Kubernetes secret `arc-runners-secret` in the namespace `arc-runners` the gha-runner-scale-set is going to deploy with the command below
-
-  ```sh
-  kubectl create secret generic arc-runners-secret \
-    --namespace=arc-runners \
-    --from-literal=github_token='ghp_your_pat'
-  ```
+- Install [helmfile](https://github.com/helmfile/helmfile).
+- Create a pre-define Kubernetes secret `arc-runners-secret` in the namespace `arc-runners` the gha-runner-scale-set is going to deploy to authenticate Actions Runner Controller (ARC) to the GitHub API by using a GitHub App or by using a personal access token (classic). For more information, see [Authenticating to the GitHub API](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners-with-actions-runner-controller/authenticating-to-the-github-api).
 
 ## Getting started
 
