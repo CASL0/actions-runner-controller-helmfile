@@ -15,3 +15,14 @@ githubConfigSecret: arc-runners-secret
 controllerServiceAccount:
   namespace: arc-system
   name: arc-gha-rs-controller
+listenerTemplate:
+  spec:
+    containers:
+      - name: listener
+        securityContext:
+          runAsUser: 1000
+  metadata:
+    annotations:
+      prometheus.io/scrape: "true"
+      prometheus.io/path: "/metrics"
+      prometheus.io/port: "8080"
