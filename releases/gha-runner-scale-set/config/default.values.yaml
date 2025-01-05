@@ -1,5 +1,6 @@
 ---
 githubConfigUrl: https://github.com/CASL0/actions-runner-controller-helmfile
+runnerScaleSetName: my-arc-runners
 maxRunners: 5
 minRunners: 0
 template:
