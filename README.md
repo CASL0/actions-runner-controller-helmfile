@@ -37,6 +37,10 @@ This helmfile provides quick instructions on Kubernetes environments.
          - run: echo "Hello world!"
    ```
 
+## Advanced Configuration
+
+See [advanced.md](docs/advanced.md).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
