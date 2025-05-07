@@ -18,3 +18,4 @@ jobs:
         uses: helmfile/helmfile-action@v2.0.4
         with:
           helmfile-args: lint
+          helmfile-version: "v0.169.2"
