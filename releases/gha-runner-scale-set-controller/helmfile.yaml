@@ -6,6 +6,6 @@ releases:
     createNamespace: true
     namespace: arc-system
     chart: oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller
-    version: 0.11.0
+    version: 0.12.1
     inherit:
       - template: default
