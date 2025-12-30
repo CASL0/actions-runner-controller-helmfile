@@ -4,5 +4,12 @@
     "config:recommended",
     "github>aquaproj/aqua-renovate-config#2.8.0"
   ],
-  "labels": ["dependencies"]
+  "labels": ["dependencies"],
+  "packageRules": [
+    {
+      "groupName": "Automerge non-major updates",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
 }
