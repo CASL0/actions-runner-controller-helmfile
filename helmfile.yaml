@@ -4,4 +4,4 @@ bases:
   - templates.yaml
 
 helmfiles:
-  - releases/**/helmfile.yaml
+  - releases/**/helmfile.yaml.gotmpl
