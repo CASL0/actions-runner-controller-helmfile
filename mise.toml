@@ -1,0 +1,3 @@
+[tools]
+helm = "v4.0.4"
+helmfile = "v1.2.3"
